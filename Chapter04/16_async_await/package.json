@@ -1,19 +1,21 @@
 {
-  "name": "async_await",
-  "version": "1.0.0",
-  "description": "sample async await usage with babel",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Luciano Mammino",
-  "license": "ISC",
-  "devDependencies": {
-    "babel-cli": "^6.9.0",
-    "babel-plugin-syntax-async-functions": "^6.3.13",
-    "babel-plugin-transform-async-to-generator": "^6.4.0"
-  },
-  "dependencies": {
-    "request": "^2.67.0"
-  }
+	"name": "async_await",
+	"version": "1.0.0",
+	"description": "sample async await usage with babel",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"//": "아래  명령어는 바벨을 이용하여 index.js 파일을 index.es5.js 로 트랜스파일링함",
+		"start": "babel index.js --out-file index.es5.js --plugins=babel-plugin-syntax-async-functions,babel-plugin-transform-async-to-generator"
+	},
+	"author": "Luciano Mammino",
+	"license": "ISC",
+	"devDependencies": {
+		"babel-cli": "^6.9.0",
+		"babel-plugin-syntax-async-functions": "^6.3.13",
+		"babel-plugin-transform-async-to-generator": "^6.4.0"
+	},
+	"dependencies": {
+		"request": "^2.67.0"
+	}
 }

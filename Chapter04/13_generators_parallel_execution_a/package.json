@@ -6,5 +6,8 @@
     "request": "^2.69.0",
     "slug": "^0.8.0",
     "thunkify": "^2.1.2"
+  },
+  "scripts": {
+    "start": "node index.js https://www.naver.com"
   }
 }
