@@ -1,14 +1,15 @@
 {
-  "name": "10_streams_writable_implement",
-  "version": "1.0.0",
-  "description": "",
-  "main": "toFileStream.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "mkdirp": "^0.5.1"
-  }
+	"name": "10_streams_writable_implement",
+	"version": "1.0.0",
+	"description": "",
+	"main": "toFileStream.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node writeToFile.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"mkdirp": "^0.5.1"
+	}
 }

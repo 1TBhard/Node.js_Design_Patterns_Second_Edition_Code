@@ -1,15 +1,17 @@
 {
-  "name": "20_streams_merge",
-  "version": "1.0.0",
-  "description": "This example shows how to merge two streams.",
-  "main": "mergeTar.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "fstream": "^1.0.8",
-    "tar": "^2.2.1"
-  }
+	"name": "20_streams_merge",
+	"version": "1.0.0",
+	"description": "This example shows how to merge two streams.",
+	"main": "mergeTar.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"//": "sourceA 디렉토리와 sourceB 의 디렉토리의 모두를 하나의 result.tar 파일로 생성",
+		"start": "node mergeTar result.tar sourceA sourceB"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"fstream": "^1.0.8",
+		"tar": "^2.2.1"
+	}
 }

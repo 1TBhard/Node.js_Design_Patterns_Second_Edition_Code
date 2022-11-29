@@ -1,22 +1,23 @@
-"use strict";
-
 const fs = require("fs");
 const split = require("split");
 const request = require("request");
-
-// 순차 병렬 실행
-const throughParallel = require("through2-parallel");
+const through = require("through2");
 
 fs.createReadStream(process.argv[2])
 	.pipe(split())
 	.pipe(
-		throughParallel.obj({ concurrency: 2 }, function (url, enc, done) {
+		through.obj(function (url, enc, done) {
 			if (!url) return done();
+
 			request.head(url, (err, response) => {
-				this.push(url + " is " + (err ? "down" : "up") + "\n");
+				const data = `${url} is ${err ? "down" : "up"}\n`;
+
+				this.push(data);
 				done();
 			});
 		})
 	)
 	.pipe(fs.createWriteStream("results.txt"))
-	.on("finish", () => console.log("All urls were checked"));
+	.on("finish", () => {
+		console.log("All urls were checked");
+	});

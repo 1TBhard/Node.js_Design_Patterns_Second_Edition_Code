@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "request": "^2.69.0",
-    "split": "^1.0.0"
+    "split": "^1.0.0",
+    "through2": "^4.0.2"
   }
 }
