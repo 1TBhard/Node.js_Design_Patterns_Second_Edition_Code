@@ -1,8 +1,7 @@
 "use strict";
 
-const level = require('level');
-const sublevel = require('level-sublevel');
+const { Level } = require("level");
+const sublevel = require("level-sublevel");
 
-module.exports = sublevel(
-  level('example-db', {valueEncoding: 'json'})
-);
+// db에 개별 섹션을만들고 질의를 할 수 있게함
+module.exports = sublevel(new Level("example-db", { valueEncoding: "json" }));
