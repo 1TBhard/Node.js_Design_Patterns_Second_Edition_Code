@@ -1,14 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <script src="node_modules/mustache/mustache.js"></script>
-    <script src="umdModule.js"></script>
-</head>
-<body>
-    <div id="main"></div>
-    <script>
-        document.getElementById('main').innerHTML = UmdModule.sayHello('Browser!');
-    </script>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<script src="node_modules/mustache/mustache.js"></script>
+		<script src="umdModule.js"></script>
+	</head>
+	<body>
+		<div id="main"></div>
+		<script>
+			<!-- AMD, CommonJS 아니므로 -->
+			document.getElementById("main").innerHTML =
+				UmdModule.sayHello("Browser!");
+		</script>
+	</body>
 </html>
